@@ -41,8 +41,10 @@
                 <div class="col-lg-4 col-md-4 col-sm-12">
 
                     <div class="card" style="width: 18rem;">
-                        <h6 class="card-title">Current Weather on Mars</h6>
-                        <p class="card-text">{{ mars_info.mars_weather }}</p>
+                        <div class="Card-body text-white bg-dark">
+                         <h6 class="card-title">Current Weather on Mars</h6>
+                         <p class="card-text">{{ mars_info.mars_weather }}</p>
+                        </div> 
                     </div>
                 </div>
 
@@ -50,7 +52,8 @@
                 <br>
                 <h3>Mars Facts</h3>
                 <div style="max-width: 450px; max-height: 150px; font-size: 15px; margin-bottom: 65px;">
-                    {{mars_info.tables|safe}}
+                                                            {{mars_info.tables|safe}}
+
                 </div>
             </div>
         </div>  
@@ -62,7 +65,10 @@
     <hr>
     <div class="col-md-12">
         <div class="row">
+
+ 
             {% for item in mars_info.hiu %}
+
             <div class="col-md-6">
                 <div class="card text-white bg-dark" style="margin: 30px;">
                     <img class="card-img-top" src="{{ item.img_url }}" />
